@@ -1,0 +1,5 @@
+should use command:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.
+
+to add cuurent directory
+
