@@ -1,0 +1,49 @@
+#----------------------------------------------------------------------
+CC = gcc
+LINKER = g++
+
+#MACHINE = sun4
+MACHINE = linux
+SIS = /home/aderry/sis-1.4/sis
+SISHDR = sis_header
+
+PSRC	= main.lib_test.c
+
+POBJ	= $(PSRC:.c=.o)
+
+PHDR	= rewire_c.h
+MISC  = $(P).1 $(P).doc Makefile
+
+TARGET = rewire_c
+
+LIBS = $(SIS)/lib/libsis.a librewire.a
+
+XXLIBS = $(LIBS)
+
+LINTLIBS = $(SIS)/lib/llib-lsis.ln	
+
+INCLUDE	= -I$(SISHDR)
+#INCLUDE	= -I$(SISHDR) -I/usr/local/mpatrol 
+CFLAGS	= $(INCLUDE) -g
+FFLAGS  = -g
+LDFLAGS	= -ltermcap -lreadline -g
+#LDFLAGS	= -g -ltermcap -lreadline -L/usr/local/lib -lmpatrol -lbfd -liberty
+LINTFLAGS = $(INCLUDE)
+
+
+#----------------------------------------------------------------------
+
+$(TARGET): $(POBJ) $(LIBS) $(INC)
+	$(LINKER) $(LDFLAGS) -o $(TARGET) $(POBJ) $(LIBS) -lm
+
+#rewire/librewire.a: rewire/*.c rewire/*.h
+#	cd rewire && make librewire.a && cd ..
+
+%.o: %.c $(PHDR)
+	$(CC) -c $< $(CXXFLAGS) -o $@
+
+ctags:
+	ctags -u $(PSRC)
+
+clean:
+	rm $(TARGET) *.o

@@ -1,0 +1,5 @@
+*.o
+abc
+bench
+blif
+lib

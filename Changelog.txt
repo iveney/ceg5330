@@ -1,0 +1,17 @@
+Fri Oct  7 19:01:59 HKT 2005
+Completed Graph and Node class. About to change Graph and Node class to
+template type. Desired design: Graph<node property, edge property>.
+
+Fri Oct 14 18:09:15 HKT 2005
+Finished changing Graph to Graph<graph property, node property, edge property>. 
+Next: implement properties of Boolean network and IG.
+
+Sun Dec  4 20:00:15 HKT 2005
+Finished checking implication engine. Verified MAs found are correct. Finished
+stuck-at fault checking. Corrected memory leakage bug.
+
+Tue Apr 18 16:39:56 HKT 2006
+Optimized code. Each cwDst node is only implied once.
+
+Fri Nov 17 12:45:32 HKT 2006
+Handle multiple input AND OR gates.

@@ -1,0 +1,88 @@
+Index: rewire.cpp
+===================================================================
+--- rewire.cpp	(revision 92)
++++ rewire.cpp	(working copy)
+@@ -1,4 +1,5 @@
+ #include <string>
++#include <set>
+ #include <map>
+ #include "array.h"
+ #include "imply.h"
+@@ -24,6 +25,8 @@
+ //char debug_buf[1048576];
+ //int debug_buf_s = 0;
+ 
++inline static int isAllTwDstFaninFanoutCone(BNode* twDst, set<BNode*>& twFanoutCone);
++
+ static void rewireMarkFanoutCone(BNode *node, Array<BNode *> &fanoutMarkedNodes) {
+ 	BNode *fanout;
+ 	int i;
+@@ -561,6 +564,7 @@
+ 
+ 	BNode *bnode;
+ 	int i, j;
++    set<BNode*> twFanoutConeSet;
+ 
+ 	RewireAW awFound;
+ 
+@@ -586,7 +590,13 @@
+ 
+ 	result = rewireTestStuckFault(twSrc, twDst, stucktype, *markedNodes, *omaMarkedNodes, *nomaMarkedNodes, rlevel);
+ 
+-	rewireClearFlag(*fanoutMarkedNodes, BNODE_FANOUT_CONE_MARK);
++	rewireClearFlag(*fanoutMarkedNodes, BNODE_FANOUT_CONE_MARK);//althought the marks are cleared, the list still exists    
++    for (i = 0; i < (*fanoutMarkedNodes).size; i++)
++    {
++        BNode* fanoutNode = array_fetch(*fanoutMarkedNodes, i);
++        twFanoutConeSet.insert(twFanoutConeSet.end(), fanoutNode);
++    }
++
+ 	fanoutMarkedNodes->clear();
+ 
+ 	if (result != REDUNDANT) {
+@@ -603,7 +613,9 @@
+ 		for (i = 0; i < (*omaMarkedNodes).size; i++) {
+ 			bnode = array_fetch((*omaMarkedNodes), i);
+ 			
+-			if (node_type(bnode) != BNODE_PI && node_type(bnode) != BNODE_PO) {
++			if (node_type(bnode) != BNODE_PI &&
++                node_type(bnode) != BNODE_PO &&
++                isAllTwDstFaninFanoutCone(bnode, twFanoutConeSet) == 0) {
+ 
+ 				if (bnode_flag(bnode) & BNODE_IS_ABSDOM) {
+ 
+@@ -636,7 +648,9 @@
+ 		for (i = 0; i < (*nomaMarkedNodes).size; i++) {
+ 			bnode = array_fetch((*nomaMarkedNodes), i);
+ 
+-			if (node_type(bnode) != BNODE_PI && node_type(bnode) != BNODE_PO) {
++			if (node_type(bnode) != BNODE_PI &&
++                node_type(bnode) != BNODE_PO &&
++                isAllTwDstFaninFanoutCone(bnode, twFanoutConeSet) == 0 ) {
+ 				if (bnode_flag(bnode) & BNODE_IS_ABSDOM) {
+ 
+ 					if (node_mark(bnode_ignodes(bnode).g0)) {
+@@ -852,5 +866,23 @@
+ 	freeBNodelist(nomaMarkedNodes);
+ 	freeBNodelist(fanoutMarkedNodes);
+ 
++    twFanoutConeSet.clear();
++
+ 	return ret;
+ }
++
++//determins if all fanins of twDst are located in the fanout cone of tw
++inline static int isAllTwDstFaninFanoutCone(BNode* twDst, set<BNode*>& twFanoutConeSet)
++{
++    BNode* fanin;
++    int i;
++    foreach_fanin(twDst, i, fanin)
++    {
++        if (twFanoutConeSet.find(fanin) == twFanoutConeSet.end())
++        {
++            return 0;
++        }
++    }
++
++    return 1;
++}

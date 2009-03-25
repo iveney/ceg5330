@@ -1,0 +1,117 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+DEBUG_SHOW_TRACE	imply.cpp	7;"	d	file:
+DEBUG_SHOW_TRACE	imply.noforced.cpp	7;"	d	file:
+DEBUG_SHOW_TRACE	rewire.cpp	7;"	d	file:
+DEFAULT_LIST_SIZE	imply.cpp	12;"	d	file:
+DEFAULT_LIST_SIZE	imply.noforced.cpp	12;"	d	file:
+DEFAULT_LIST_SIZE	rewire.cpp	11;"	d	file:
+IGAllowBackwardPropagation	imply.cpp	/^void IGAllowBackwardPropagation(IGNode *node) {$/;"	f
+IGAllowBackwardPropagation	imply.noforced.cpp	/^void IGAllowBackwardPropagation(IGNode *node) {$/;"	f
+IGAllowForwardPropagation	imply.cpp	/^void IGAllowForwardPropagation(IGNode *node) {$/;"	f
+IGAllowForwardPropagation	imply.noforced.cpp	/^void IGAllowForwardPropagation(IGNode *node) {$/;"	f
+IGClearImplyStack	imply.cpp	/^void IGClearImplyStack() {$/;"	f
+IGClearImplyStack	imply.noforced.cpp	/^void IGClearImplyStack() {$/;"	f
+IGEndImply	imply.cpp	/^void IGEndImply() {$/;"	f
+IGEndImply	imply.noforced.cpp	/^void IGEndImply() {$/;"	f
+IGImply	imply.cpp	/^int IGImply(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+IGImply	imply.noforced.cpp	/^int IGImply(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+IGMarkFaultyNodes	imply.cpp	/^void IGMarkFaultyNodes(Array<IGNode *> &initNodes) {$/;"	f
+IGMarkFaultyNodes	imply.noforced.cpp	/^void IGMarkFaultyNodes(Array<IGNode *> &initNodes) {$/;"	f
+IGMarkInitNodes	imply.cpp	/^int IGMarkInitNodes(Array<IGNode *> &initNodes, Array<IGNode *> &markedNodes) {$/;"	f
+IGMarkInitNodes	imply.noforced.cpp	/^int IGMarkInitNodes(Array<IGNode *> &initNodes, Array<IGNode *> &markedNodes) {$/;"	f
+IGMarkInitNodesForced	imply.cpp	/^int IGMarkInitNodesForced(Array<IGNode *> &initNodes, Array<IGNode *> &markedNodes) {$/;"	f
+IGMarkInitNodesForced	imply.noforced.cpp	/^int IGMarkInitNodesForced(Array<IGNode *> &initNodes, Array<IGNode *> &markedNodes) {$/;"	f
+IGResetImply	imply.cpp	/^void IGResetImply(Array<IGNode *> &markedNodes) {$/;"	f
+IGResetImply	imply.noforced.cpp	/^void IGResetImply(Array<IGNode *> &markedNodes) {$/;"	f
+IGRlearnImply	imply.cpp	/^int IGRlearnImply(int r, Array<IGNode *> &markedNodes) {$/;"	f
+IGRlearnImply	imply.noforced.cpp	/^int IGRlearnImply(int r, Array<IGNode *> &markedNodes) {$/;"	f
+IGStackElement	imply.cpp	/^typedef struct IGStackElement_ IGStackElement;$/;"	t	file:
+IGStackElement	imply.noforced.cpp	/^typedef struct IGStackElement_ IGStackElement;$/;"	t	file:
+IGStackElement_	imply.cpp	/^struct IGStackElement_ {$/;"	s	file:
+IGStackElement_	imply.noforced.cpp	/^struct IGStackElement_ {$/;"	s	file:
+IGStopBackwardPropagation	imply.cpp	/^void IGStopBackwardPropagation(IGNode *node) {$/;"	f
+IGStopBackwardPropagation	imply.noforced.cpp	/^void IGStopBackwardPropagation(IGNode *node) {$/;"	f
+IGStopForwardPropagation	imply.cpp	/^void IGStopForwardPropagation(IGNode *node) {$/;"	f
+IGStopForwardPropagation	imply.noforced.cpp	/^void IGStopForwardPropagation(IGNode *node) {$/;"	f
+IGUnmarkFaultyNodes	imply.cpp	/^void IGUnmarkFaultyNodes(Array<IGNode *> &initNodes) {$/;"	f
+IGUnmarkFaultyNodes	imply.noforced.cpp	/^void IGUnmarkFaultyNodes(Array<IGNode *> &initNodes) {$/;"	f
+INIT_MASK	imply.cpp	11;"	d	file:
+INIT_MASK	imply.noforced.cpp	11;"	d	file:
+MAX_BIT	imply.cpp	31;"	d	file:
+MAX_BIT	imply.noforced.cpp	31;"	d	file:
+_bnodelists	rewire.cpp	/^static Array<Array<BNode *> *> _bnodelists;$/;"	v	file:
+_ignodelists	rewire.cpp	/^static Array<Array<IGNode *> *> _ignodelists;$/;"	v	file:
+_nodelists	imply.cpp	/^static Array<Array<IGNode *> *> _nodelists;$/;"	v	file:
+_nodelists	imply.noforced.cpp	/^static Array<Array<IGNode *> *> _nodelists;$/;"	v	file:
+allocBNodelist	rewire.cpp	13;"	d	file:
+allocIGNodelist	rewire.cpp	17;"	d	file:
+allocNodelist	imply.cpp	14;"	d	file:
+allocNodelist	imply.noforced.cpp	14;"	d	file:
+array_fetch	rewire_c.cpp	4;"	d	file:
+array_fetch	sis_interface.cpp	4;"	d	file:
+assignDominatorRecur	bnetwork.cpp	/^void BNetwork::assignDominatorRecur(BNode *node) {$/;"	f	class:BNetwork
+currentBNetwork	rewire_c.cpp	/^static BNetwork *currentBNetwork = NULL;$/;"	v	file:
+currentIGNetwork	rewire_c.cpp	/^static IGNetwork *currentIGNetwork = NULL;$/;"	v	file:
+currentNetwork	rewire_c.cpp	/^static network_t *currentNetwork = NULL;$/;"	v	file:
+forced	imply.cpp	/^	int forced;$/;"	m	struct:IGStackElement_	file:
+forced	imply.noforced.cpp	/^	int forced;$/;"	m	struct:IGStackElement_	file:
+foreach_fanin	rewire_c.cpp	5;"	d	file:
+foreach_fanin	sis_interface.cpp	5;"	d	file:
+foreach_fanout	rewire_c.cpp	6;"	d	file:
+foreach_fanout	sis_interface.cpp	6;"	d	file:
+foreach_node	rewire_c.cpp	7;"	d	file:
+foreach_node	sis_interface.cpp	7;"	d	file:
+freeBNodelist	rewire.cpp	14;"	d	file:
+freeIGNodelist	rewire.cpp	18;"	d	file:
+freeNodelist	imply.cpp	15;"	d	file:
+freeNodelist	imply.noforced.cpp	15;"	d	file:
+imply_	imply.cpp	/^inline int imply_(int mask, Array<IGNode *> &markedNodes, Array<IGNode *> &unjustifiedAndNodes) {$/;"	f
+imply_	imply.noforced.cpp	/^inline int imply_(int mask, Array<IGNode *> &markedNodes, Array<IGNode *> &unjustifiedAndNodes) {$/;"	f
+joinJustifications	imply.cpp	/^inline void joinJustifications(int mask, Array<IGNode *> &just1MarkedNodes, Array<IGNode *> &just2MarkedNodes, Array<IGNode *> &markedNodes) {$/;"	f
+joinJustifications	imply.noforced.cpp	/^inline void joinJustifications(int mask, Array<IGNode *> &just1MarkedNodes, Array<IGNode *> &just2MarkedNodes, Array<IGNode *> &markedNodes) {$/;"	f
+main	main.cpp	/^int main(int argc, char **argv){$/;"	f
+main	main.fileio.cpp	/^int main(int argc, char **argv){$/;"	f
+main	main.lib_test.c	/^int main(int argc, char **argv) {$/;"	f
+main	main.stdio.cpp	/^int main(int argc, char **argv){$/;"	f
+markFaultyNodes	rewire.cpp	/^static inline void markFaultyNodes(BNode *src) {$/;"	f	file:
+node	imply.cpp	/^	IGNode *node;$/;"	m	struct:IGStackElement_	file:
+node	imply.noforced.cpp	/^	IGNode *node;$/;"	m	struct:IGStackElement_	file:
+node_name	sis_interface.cpp	14;"	d	file:
+node_name	sis_interface.cpp	15;"	d	file:
+node_num_fanin	sis_interface.cpp	8;"	d	file:
+power2	imply.cpp	/^static int power2[6] = {1, 2, 4, 8, 16, 32};$/;"	v	file:
+power2	imply.noforced.cpp	/^static int power2[6] = {1, 2, 4, 8, 16, 32};$/;"	v	file:
+rStop	imply.cpp	/^static int rStop = 0;$/;"	v	file:
+rStop	imply.noforced.cpp	/^static int rStop = 0;$/;"	v	file:
+read_blif_bnet	sis_interface.cpp	/^BNetwork *read_blif_bnet(char *filename) {$/;"	f
+resetFanoutConeMark	rewire.cpp	/^static inline void resetFanoutConeMark(Array<BNode *> &fanoutMarkedNodes) {$/;"	f	file:
+resetNodeFlag	imply.cpp	/^inline void resetNodeFlag(int mask, Array<IGNode *> &markedNodes, int flag) {$/;"	f
+resetNodeFlag	imply.noforced.cpp	/^inline void resetNodeFlag(int mask, Array<IGNode *> &markedNodes, int flag) {$/;"	f
+resetNodeMark	imply.cpp	/^inline void resetNodeMark(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+resetNodeMark	imply.noforced.cpp	/^inline void resetNodeMark(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+rewireAssignCWSensitizeValue	rewire.cpp	/^static inline int rewireAssignCWSensitizeValue(BNode *dst, Array<IGNode *> &markedNodes) {$/;"	f	file:
+rewireAssignControlValue	rewire.cpp	/^static inline void rewireAssignControlValue(BNode *src, BNode *dst, int stucktype, Array<IGNode *> &markedNodes){$/;"	f	file:
+rewireAssignSensitizeValue	rewire.cpp	/^static inline int rewireAssignSensitizeValue(BNode *src, BNode *dst, Array<IGNode *> &markedNodes) {$/;"	f	file:
+rewireClearFlag	rewire.cpp	/^static inline void rewireClearFlag(Array<BNode *> &markedNodes, int flag) {$/;"	f	file:
+rewireEndImply	rewire.cpp	/^void rewireEndImply() {$/;"	f
+rewireFindAW	rewire.cpp	/^int rewireFindAW(BNode *twSrc, BNode *twDst, int rlevel, Array<RewireAW> &aw) {$/;"	f
+rewireMarkFanoutCone	rewire.cpp	/^static void rewireMarkFanoutCone(BNode *node, Array<BNode *> &fanoutMarkedNodes) {$/;"	f	file:
+rewireTestCWDst	rewire.cpp	/^static inline int rewireTestCWDst(BNode *dst, BNodeType function, Array<IGNode *> &markedNodes, int r) {$/;"	f	file:
+rewireTestCWDstEnd	rewire.cpp	/^static inline void rewireTestCWDstEnd(BNode *dst, BNodeType function) {$/;"	f	file:
+rewireTestCWSrc	rewire.cpp	/^static inline int rewireTestCWSrc(BNode *src, int stucktype, Array<IGNode *> &markedNodes, int r) {$/;"	f	file:
+rewireTestStuckFault	rewire.cpp	/^static inline int rewireTestStuckFault(BNode *src, BNode *dst, int stucktype, Array<IGNode *> &markedNodes, Array<BNode *> &omaMarkedNodes, Array<BNode *> &nomaMarkedNodes, int r) {$/;"	f	file:
+rewire_end	rewire_c.cpp	/^extern "C" void rewire_end() {$/;"	f
+rewire_find_aw	rewire_c.cpp	/^extern "C" int rewire_find_aw(node_t *twsrc, node_t *twdst, int rlevel, array_t *aw) {$/;"	f
+rewire_network_change	rewire_c.cpp	/^extern "C" void rewire_network_change(network_t *network) {$/;"	f
+rlearnImply_	imply.cpp	/^static int rlearnImply_(IGNode *node, int r, unsigned int mask, Array<IGNode *> &markedNodes) {$/;"	f	file:
+rlearnImply_	imply.noforced.cpp	/^static int rlearnImply_(IGNode *node, int r, unsigned int mask, Array<IGNode *> &markedNodes) {$/;"	f	file:
+sisnet2BNetwork	sis_interface.cpp	/^BNetwork *sisnet2BNetwork(network_t *net) {$/;"	f
+unmarkFaultyNodes	rewire.cpp	/^static inline void unmarkFaultyNodes(BNode *src) {$/;"	f	file:
+updateNodeMark	imply.cpp	/^inline void updateNodeMark(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+updateNodeMark	imply.noforced.cpp	/^inline void updateNodeMark(int mask, Array<IGNode *> &markedNodes) {$/;"	f
+util_readblif	main.lib_test.c	/^int util_readblif(char *filename, network_t **net){$/;"	f
